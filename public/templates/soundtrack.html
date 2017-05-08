@@ -1,0 +1,12 @@
+<div class="row">
+  <div ng-repeat="track in vm.tracks" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img id="soundtrackimg" src={{track.album.images[0].url}} alt="..." href={{track.href}}>
+      <div class="caption">
+        <h3>{{track.name}}</h3>
+          <p>Artist: {{track.artists[0].name}}</p>
+        <p><a href="#!/movie/{{movie.Title}}" class="btn btn-primary" role="button">Movie</a> <a href="#" class="btn btn-default" role="button">Youtube</a> <a href="#" class="btn btn-default" role="button">Add Favorites</a></p>
+      </div>
+    </div>
+  </div>
+</div>

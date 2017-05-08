@@ -8,14 +8,19 @@
   function config($routeProvider) {
     $routeProvider
       .when('/', {
-        controller: 'infoCtrl',
+        controller: 'movieCtrl',
         controllerAs: 'vm',
-        templateUrl: 'templates/info.html'
+        templateUrl: 'templates/movie.html'
       })
-      .when('/weather', {
-        controller: 'weatherCtrl',
+      .when('/soundtrack/:id', {
+        controller: 'soundtrackCtrl',
         controllerAs: 'vm',
-        templateUrl: 'templates/weather.html'
+        templateUrl: 'templates/soundtrack.html'
+      })
+      .when('/video/:id', {
+        controller: 'videoCtrl',
+        controllerAs: 'vm',
+        templateUrl: 'templates/video.html'
       })
       .otherwise({
         redirectTo: '/'
