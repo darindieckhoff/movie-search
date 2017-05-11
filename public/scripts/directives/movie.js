@@ -1,7 +1,7 @@
 angular.module('app')
 .directive('movie', function() {
   return {
-    templateUrl: 'templates/movieInfo.html',
+    templateUrl: 'templates/movie.html',
     controller: 'movieCtrl',
     replace: true
   }

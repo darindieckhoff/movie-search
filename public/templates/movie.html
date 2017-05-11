@@ -1,11 +1,21 @@
-<form class="form-inline">
-  <div class="form-group">
-    <label for="destination">Movie Title:</label>
-    <input type="text" class="form-control" id="destination" placeholder="Guardians of the Galaxy" ng-model="vm.movieSearch">
+<!-- <nav> -->
+<nav class="navbar navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Movie Search</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#!/">Search</a></li>
+      <li><a href="#!/favorites">Favorites</a></li>
+    </ul>
   </div>
-    <button type="button" class="btn btn-default" ng-click="vm.search()">Search</button>
-</form>
-<div ng-hide="!vm.movies" class="row">
+</nav>
+<!-- /navbar -->
+<div class="row">
+  <div ng-hide="vm.movies.Search">
+    <h1>{{vm.movies.Error}}</h1>
+    <a class="error" href="#!/search" class="btn btn-default" role="button">Return to Search!</a>
+  </div>
   <div ng-repeat="movie in vm.movies.Search" class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img ng-if="movie.Poster !== 'N/A'" src={{movie.Poster}} alt="Movie Poster">
@@ -13,7 +23,7 @@
       <div class="caption">
         <h3>{{movie.Title}}</h3>
         <p>{{movie.info.Plot}}</p>
-        <p><a href="#!/soundtrack/{{movie.Title}}" class="btn btn-default" role="button">Sountrack</a> <a href="#!/video/{{movie.Title}}" class="btn btn-default" role="button">YouTube</a> <a href="#" class="btn btn-default" role="button">Favorites</a></p>
+        <p><a href="#!/soundtrack/{{movie.Title}}" class="btn btn-default" role="button">Sountrack</a> <a href="#!/video/{{movie.Title}}" class="btn btn-default" role="button">YouTube</a> <a href="#" class="btn btn-default" role="button" ng-click="vm.addFavorite(movie)">Add Favorites</a></p>
       </div>
     </div>
   </div>

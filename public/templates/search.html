@@ -1,0 +1,25 @@
+<!-- <nav> -->
+<nav class="navbar navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Movie Search</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#!/favorites">Favorites</a></li>
+    </ul>
+<!--         <ul class="nav navbar-nav navbar-right">
+      <li><a href="#!/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#!/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul> -->
+  </div>
+</nav>
+<!-- /navbar -->
+<div class="container-fluid">
+  <h1>Movie Search</h1>
+  <form class="form-inline">
+    <div class="form-group">
+      <input type="text" class="form-control" id="destination" placeholder="Guardians of the Galaxy" ng-model="vm.movieSearch">
+    </div>
+    <button type="button" class="btn btn-default" ng-click="vm.search()">Search</button>
+  </form>
+</div
