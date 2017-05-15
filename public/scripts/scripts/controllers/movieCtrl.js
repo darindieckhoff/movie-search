@@ -2,12 +2,15 @@
 
 'use strict';
 
+var angular = require('angular');
+
 angular.module('app')
 
-.controller('movieCtrl', function ($http, dataService, $location, $routeParams) {
+.controller('movieCtrl', function ($http, dataService, $routeParams) {
 
   var vm = this;
 
+  //get movie info from OMDb API based on user search input
   dataService.getMovies($routeParams.id,
     function (response) {
       vm.movies = response.data;
@@ -27,25 +30,28 @@ angular.module('app')
       console.log(error);
     });
 
+  //POST movie data to favorite db
   vm.addFavorite = function(movie) {
-    var data = {
+    var movieData = {
       title: movie.Title,
       year: movie.Year,
       id: movie.imdbID,
       poster: movie.Poster
     };
 
+    //convert movieData object to JSON
+    var data = angular.toJson(movieData);
+
     var config = {
       headers : {
-          "Content-Type": "application/json; charset = utf-8;"
+          "Content-Type": "application/json;"
       }
     };
-
-    $http.post('/favorites', data, config)
-      .then(function (response) {
-       console.log('favorite added');
-      })
-      .catch(function (error) {
+    
+    dataService.addFavorite(data, config, 
+      function (response) {
+        console.log(response);
+      }, function(error){
         console.log(error);
       }); 
 

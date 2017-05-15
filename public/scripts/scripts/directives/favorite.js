@@ -1,7 +1,9 @@
+var angular = require('angular');
+
 angular.module('app')
 .directive('favorite', function() {
   return {
-    templateUrl: 'templates/favorite.html',
+    templateUrl: 'templates/favorites.html',
     controller: 'favoriteCtrl',
     replace: true
   }

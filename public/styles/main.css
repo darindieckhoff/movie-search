@@ -8,20 +8,27 @@ h1 {
   font-size: 10rem;
 }
 
-h1, .form-inline  {
-    left: 0;
-    line-height: 200px;
-    margin: auto;
-    margin-top: -100px;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
+h1 {
+  left: 0;
+  line-height: 200px;
+  margin: auto;
+  margin-top: -100px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  height: auto;
 }
 
-.form-inline  {
-    margin-top: -30px;
-    font-size: 2rem;
+.form-group  {
+  left: 0;
+  line-height: 200px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  height: auto;
 }
 
 .error {
@@ -35,9 +42,13 @@ h1, .form-inline  {
   text-align: center;
 }
 
+.row {
+  margin-top: 70px;
+}
+
 .form-control, .btn {
   font-weight: bold;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 #destination {

@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-//Defines User Schema
+//Defines Favorites Schema
 var FavoriteSchema = new Schema({
   title: String,
   year: String,
