@@ -14,7 +14,7 @@ var express = require('express'),
   data = require('./data/data.json'),
   path = require('path'),
   favicon = require('serve-favicon'),
-  favorites = require('./routes/favorites');
+  searches = require('./routes/searches');
 
 var app = express();
 var router = express.Router();
@@ -63,12 +63,7 @@ app.use(favicon(path.join('./','public','images','favicon.ico')));
 app.use('/', express.static('public'));
 
 //setup the routes
-app.use('/api/favorites', favorites);
-
-app.get('*', function(req, res) {
-    res.sendfile('./public/index.html'); // load the single view file
-});
-
+app.use('/api/searches', searches);
 
 // catch 404 and forward to error handler
 app.use(function(err, req, res, next) {

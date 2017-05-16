@@ -7,7 +7,7 @@
     <ul class="nav navbar-nav">
       <li><a href="#!/">Search</a></li>
       <li><a href ng-click="vm.return()">Return to Movie</a></li>
-      <li><a href="#!/favorites">Favorites</a></li>
+      <<li><a href="#!/api/searches">Recent Searches</a></li>
     </ul>
   </div>
 </nav>
@@ -18,13 +18,13 @@
     <a class="error" href ng-click="vm.return()" class="btn btn-default" role="button">Return to Movies!</a>
   </div>
   <div ng-repeat="video in vm.videos" class="col-sm-6 col-md-4">
-    <div class="thumbnail">
+    <div class="thumbnail" id="video">
       <img id="soundtrackimg" ng-if="album.images[0].url !== 'N/A'" src={{video.snippet.thumbnails.medium.url}} alt="Video Image">
       <img id="soundtrackimg" ng-if="album.images[0].url == 'N/A'" src="../images/not-found.png" alt="Video Image Not Found">
       <div class="caption">
         <h3>{{video.snippet.title}}</h3>
-          <p>Description: {{video.snippet.description}}</p>
-        <p><a href="https://www.youtube.com/watch?v={{video.id.videoId}}" class="btn btn-outline-info" role="button">Watch on Youtube</a><a href="#" class="btn btn-outline-info" role="button">Add Favorites</a></p>
+        <p>Description: {{video.snippet.description}}</p><br>
+        <p><a href="https://www.youtube.com/watch?v={{video.id.videoId}}" class="btn btn-outline-info" role="button">Watch on Youtube</a>
       </div>
     </div>
   </div>

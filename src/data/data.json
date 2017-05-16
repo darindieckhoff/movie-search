@@ -1,11 +1,10 @@
 {
-  "favorite": {
-    "_model": "Favorite",
+  "recentSearches": {
+    "_model": "Search",
     "jaws": {
       "title": "Jaws",
-      "year": "1975",
-      "id": "tt009884",
-      "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+      "date": "2017-05-16T03:23:19.500Z",
+      "searchCount": "1"
     }  
   }
 }

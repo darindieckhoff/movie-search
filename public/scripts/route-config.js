@@ -1,7 +1,6 @@
 (function() {
-  'use strict';
   
-  var angular = require('angular');
+  'use strict';
   
   // Configure routes for application.
   
@@ -38,10 +37,10 @@
         controllerAs: 'vm',
         templateUrl: 'templates/video.html'
       })
-      .when('/favorites', {
-        controller: 'favoriteCtrl',
+      .when('/api/searches', {
+        controller: 'recentSearchesCtrl',
         controllerAs: 'vm',
-        templateUrl: 'templates/favorites.html'
+        templateUrl: 'templates/recentSearches.html'
       })
       .otherwise({
         redirectTo: '/'

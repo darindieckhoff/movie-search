@@ -2,8 +2,6 @@
 
 'use strict';
 
-var angular = require('angular');
-
 angular.module('app')
 
 .controller('soundtrackCtrl', function ($routeParams, $http, dataService) {

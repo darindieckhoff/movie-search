@@ -76,11 +76,11 @@ h1 {
   padding-top: 0px;
 }
 
-#albums {
-  height:400px;
+#soundtrackimg {
+  height:300px;
+  width:100%;
 }
 
-#soundtrackimg {
-    height:250px;
-    width:100%;
+#video {
+  height: 550px;
 }

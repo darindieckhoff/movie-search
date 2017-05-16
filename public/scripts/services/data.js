@@ -17,15 +17,14 @@ angular.module('app')
       .then(callback, errorCallback);
       };
 
+    this.saveSearch = function(data, config, callback, errorCallback) {
+      $http.post('/api/searches', data, config)
+      .then(callback, errorCallback);
+    };
+
     //returns user back to search movie  
     this.return = function(movie) {
       $location.url('/movie/' + movie);
-    };
-
-    //POST to favorites db
-    this.addFavorite = function(data, config, callback, errorCallback) {
-      $http.post('/api/favorites', data, config)
-      .then(callback, errorCallback);
     };
 
   });

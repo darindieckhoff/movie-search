@@ -1,4 +1,3 @@
-var angular = require('angular');
 
 angular.module('app')
 .directive('search', function() {
