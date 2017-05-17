@@ -11,25 +11,15 @@
 </nav>
 <!-- /navbar -->
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+  <div ng-hide="vm.searches.length > 0">
+    <h1>No Recent Searches</h1>
+    <a class="error" href="#!/search" class="btn btn-default" role="button">Return to Search!</a>
+  </div>
+  <a ng-repeat="search in vm.searches" href="#!/movie/{{search.title}}" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
-      <h3 class="mb-1">Movie Title</h3>
+      <h3 class="mb-1">{{search.title}}</h3>
     </div>
-    <small>Times Searched:</small><br>
-    <small>Last date searched:</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h3 class="mb-1">Movie Title</h3>
-    </div>
-    <small>Times Searched:</small><br>
-    <small>Last date searched:</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h3 class="mb-1">Movie Title</h3>
-    </div>
-    <small>Times Searched:</small><br>
-    <small>Last date searched:</small>
+    <small>Times Searched: {{search.searchCount}}</small><br>
+    <small>Last searched: {{ search.date | date : format }}</small>
   </a>
 </div>

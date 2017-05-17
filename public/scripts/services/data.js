@@ -17,8 +17,8 @@ angular.module('app')
       .then(callback, errorCallback);
       };
 
-    this.saveSearch = function(data, config, callback, errorCallback) {
-      $http.post('/api/searches', data, config)
+    this.saveSearch = function(data, callback, errorCallback) {
+      $http.get('/api/searches', data)
       .then(callback, errorCallback);
     };
 

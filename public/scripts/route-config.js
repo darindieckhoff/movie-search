@@ -37,7 +37,7 @@
         controllerAs: 'vm',
         templateUrl: 'templates/video.html'
       })
-      .when('/api/searches', {
+      .when('/searches', {
         controller: 'recentSearchesCtrl',
         controllerAs: 'vm',
         templateUrl: 'templates/recentSearches.html'

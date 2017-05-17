@@ -1,7 +1,8 @@
 body {
-     margin: 0;
-     background: url(../images/background.png);
-     font-family: "Comic Sans MS", cursive, sans-serif
+  margin: 0;
+  background: url(../images/background.png);
+  background-repeat: repeat-y;
+  font-family: "Comic Sans MS", cursive, sans-serif
 }
 
 h1 {
