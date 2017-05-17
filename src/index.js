@@ -24,7 +24,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 //connect to mongo database
-mongoose.connect('mongodb://localhost/movie-search');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/movie-search');
 
 var db = mongoose.connection;
 
