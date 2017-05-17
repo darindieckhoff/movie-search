@@ -7,13 +7,13 @@ angular.module('app')
 
     //gets movies from OMDb API
     this.getMovies = function(movie, callback, errorCallback) {
-      $http.get('http://www.omdbapi.com/?s=' + movie)
+      $http.get('https://www.omdbapi.com/?s=' + movie)
       .then(callback, errorCallback);
       };
 
     //gets movie plots from OMDb API for each movie
     this.getMovie = function(id, callback, errorCallback) {
-      $http.get('http://www.omdbapi.com/?i=' + id)
+      $http.get('https://www.omdbapi.com/?i=' + id)
       .then(callback, errorCallback);
       };
 
