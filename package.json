@@ -23,7 +23,6 @@
     "chai-http": "^3.0.0",
     "eslint": "^3.19.0",
     "mocha": "^3.3.0",
-    "mongoose-seeder": "^1.2.1",
     "nodemon": "^1.11.0"
   }
 }
