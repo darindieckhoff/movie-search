@@ -1,4 +1,4 @@
-# movie-searchTicTacToe
+# movie-search
 
 Movie Search App
 
